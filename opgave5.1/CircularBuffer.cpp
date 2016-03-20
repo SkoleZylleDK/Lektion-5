@@ -55,16 +55,18 @@ double CircularBuffer::meanValue() const
 	return temp / size_;
 }
 
-void CircularBuffer::print()
+void CircularBuffer::print() const
 {
+	int k = newestIndex_;
+
 	for (int i = 0; i < size_; i++)
 	{
-		if (newestIndex_ < 0)
+		if (k < 0)
 		{
-			newestIndex_ = (size_ -1);
+			k = (size_ -1);
 		}
-		cout << arrayPtr_[newestIndex_] << endl;
-		newestIndex_--;
+		cout << arrayPtr_[k] << endl;
+		k--;
 
 	}
 }

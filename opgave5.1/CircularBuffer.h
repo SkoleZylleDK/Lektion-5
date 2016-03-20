@@ -9,7 +9,7 @@ public:
 	~CircularBuffer();
 	CircularBuffer & insert(int);
 	double meanValue() const;
-	void print();
+	void print() const;
 
 private:
 	int size_;

@@ -9,5 +9,8 @@ int main()
 	CircularBuffer test1(temp_size);
 
 	test1.print();
+	
+	cout << endl << endl;
 
+	cout << test1.meanValue() << endl;
 }
